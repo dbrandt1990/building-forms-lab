@@ -26,7 +26,7 @@ class BandInput extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type='text' placeholder='Bandname' value={this.state.name} onChange={(e) => { this.handleChange(e) }} />
+          <input type='text' namd='name' placeholder='Bandname' value={this.state.name} onChange={(e) => { this.handleChange(e) }} />
           <input type='submit' value='Submit' />
         </form>
       </div>
@@ -34,8 +34,6 @@ class BandInput extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  addBand: formData => dispatch({ type: 'ADD_BAND', payload: formData })
-})
 
-export default connect(null, mapDispatchToProps)(BandInput)
+
+export default BandInput
